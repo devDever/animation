@@ -1,0 +1,53 @@
+.emoji {
+  width: 350px;
+  height: 400px;
+  background-color: rgb(177, 177, 246);
+  border-radius: 50%;
+  position: relative;
+}
+.emoji::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 65px;
+  height: 10px;
+  background-color: #000;
+  top: 100px;
+  transform: scaleY(5);
+  left: 83px;
+  border-radius: 50%;
+  -webkit-animation: blink 2s infinite;
+          animation: blink 2s infinite;
+}
+.emoji::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 65px;
+  height: 10px;
+  background-color: #000;
+  top: 100px;
+  transform: scaleY(5);
+  right: 83px;
+  border-radius: 50%;
+  -webkit-animation: blink 2s infinite;
+          animation: blink 2s infinite;
+}
+
+@-webkit-keyframes blink {
+  90% {
+    transform: none;
+  }
+  100% {
+    transform: scaleY(5);
+  }
+}
+
+@keyframes blink {
+  90% {
+    transform: none;
+  }
+  100% {
+    transform: scaleY(5);
+  }
+}/*# sourceMappingURL=style.css.map */
